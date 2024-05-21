@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bikes for Rent in Seoul</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+<div>
+    <div class="container">
+        <h1>Estimated Availability of Bikes for Rent in Seoul</h1>
+        {% if result %}
+        <h3>Quantity Estimated: {{result}}$</h3>
+        <a href="/">To Estimate Again</a>
+        {% endif %}
+        {% if result == None %}
+        <form action="/estimate" method="POST">
+
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <label>Month</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="Jan">January</option>
+                            <option value="Feb">February</option>
+                            <option value="Mar">March</option>
+                            <option value="Apr">April</option>
+                            <option value="May">May</option>
+                            <option value="Jun">June</option>
+                            <option value="Jul">July</option>
+                            <option value="Aug">August</option>
+                            <option value="Sep">September</option>
+                            <option value="Oct">October</option>
+                            <option value="Nov">November</option>
+                            <option value="Dec">December</option>
+
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label>Day of week</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>>
+                            <option value="Monday">Monday</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label>Functioning Day</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label>Holiday</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label>Hour of the Day</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value=0>0:00</option>
+                            <option value=1>1:00</option>
+                            <option value=2>2:00</option>
+                            <option value=3>3:00</option>
+                            <option value=4>4:00</option>
+                            <option value=5>5:00</option>
+                            <option value=6>6:00</option>
+                            <option value=7>3:00</option>
+                            <option value=8>4:00</option>
+                            <option value=9>5:00</option>
+                            <option value=10>10:00</option>
+                            <option value=11>11:00</option>
+                            <option value=12>12:00</option>
+                            <option value=13>13:00</option>
+                            <option value=14>14:00</option>
+                            <option value=15>15:00</option>
+                            <option value=16>16:00</option>
+                            <option value=17>17:00</option>
+                            <option value=18>18:00</option>
+                            <option value=19>19:00</option>
+                            <option value=20>20:00</option>
+                            <option value=21>21:00</option>
+                            <option value=22>22:00</option>
+                            <option value=23>23:00</option>
+                        </select>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <label>Season</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="Summer">Summer</option>
+                            <option value="Autumn">Autumn</option>
+                            <option value="Winter">Winter</option>
+                            <option value="Spring">Spring</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label>Temperature °C</label>
+                        <input type="text" class="form-control form-control-sm" name="new_bikes_estimative" placeholder="Temperature °C" required>
+                    </div>
+                    <div class="col">
+                        <label>Dew Point Temp °C</label>
+                        <input type="text" class="form-control form-control-sm" name="new_bikes_estimative" placeholder="Dew Point °C" required>
+                    </div>
+
+
+                    <div class="col">
+                        <label>Humitidy (%)</label>
+                        <input type="text" class="form-control form-control-sm" name="new_bikes_estimative" placeholder="Humidity (%)" required>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <label>Rainfall</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="no rain">No Rain</option>
+                            <option value="drizzle">Drizzle</option>
+                            <option value="light rain">Light Rain</option>
+                            <option value="moderate rain">Moderate Rain</option>
+                            <option value="heavy rain">Heavy Rain</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label>Snowfall</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="no snow">No Snow</option>
+                            <option value="light snow">Light Snow</option>
+                            <option value="moderate snow">Moderate Snow</option>
+                            <option value="heavy snow">Heavy Snow</option>
+
+                        </select>
+                    </div>
+
+                    
+
+                    <div class="col">
+                        <label>Wind Speed</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="calm">Calm</option>
+                            <option value="plowing">Plowing</option>
+                            <option value="light breeze">Light Breeze</option>
+                            <option value="weak breeze">Weak Breeze</option>
+                            <option value="moderate breeze">Moderate Breeze</option>
+                            <option value="strong breeze">Strong Breeze</option>
+                            <option value="wind">Wind</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <label>Solar Radiation</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="weak">Weak</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="strong">Strong</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label>Visibility</label>
+                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="very Bad">Very Bad</option>
+                            <option value="bad">Bad</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="good">Good</option>
+                            <option value="excelent">Excelent</option>
+
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+        </form>
+        {% endif %}
+</div>
+</body>
+</html>
