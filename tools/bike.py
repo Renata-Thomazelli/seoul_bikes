@@ -12,24 +12,41 @@ class Bike:
        self.bikes = bikes
 
    def prepare(self):
-       result = []
+       
 
       # Taking each item get from the application
-       result[0] = self.bikes[0] #Month TO DO months list
-       result[1] = self.bikes[1] #Day of week TO DO Days of the week list
-       result[2] = self.bikes[2] #Functioning Day TO DO list
-       result[3] = self.bikes[3] #Holiday TO Do List
-       result[4] = int16(self.bikes[4]) #Hour of the Day TO Do List
-       result[5] = self.bikes[5] #Season TO Do List TO Do List
-       result[6] = np.float(self.bikes[6])# Temperature °C 
-       result[7] = np.float(self.bikes[7])#Dew Point Temp °C 
-       result[8] = np.int(self.bikes[8]) #humidity 
-       result[9] = self.bikes[9] #Rainfall TO Do List
-       result[10] = self.bikes[10] #Snowfall TO Do List
-       result[11] = self.bikes[11] #Wind Speed TO Do List
-       result[12] = self.bikes[12] #Solar Radiation TO Do List
-       result[13] = self.bikes[13] #Visibility TO Do List
-
+       month = { 1 : 1 , 2 : 1 , 3 : 3 , 4 : 4 , 5 : 5 , 6 : 6 , 
+                7 : 7 , 8 :8 , 9 : 9 , 10 : 10 , 11 : 11 , 12 : 12}
+       
+       day_of_week = {'Friday' : 13 , 'Monday' : 14 , 'Saturday' : 15 , 
+                      'Sunday' : 16 , 'Thursday' : 17 , 'Tuesday' : 18 , 'Wednesday' : 19}
+       
+       functioning_day = {0 : 20, 1 : 21}
+       
+       holiday = {0 : 22 , 1 : 23}
+       
+       hour = {0 : 24 , 1 : 25 , 2 : 26 , 3 : 27 , 4 : 28 , 5 :29 , 6 :30 ,7 : 31, 8 : 32, 
+               9 : 33, 10 : 34, 11 : 35, 12 : 36, 13 : 37 , 14 : 38 , 15 : 39 , 16 : 40 , 
+               17 : 41, 18 : 42, 19 : 43 , 20 : 44 , 21 : 45, 22 : 46 , 23 : 47}
+       
+       seasons = {'Autum' : 48, 'Spring' : 49 , 'Summer' : 50 , 'Winter' : 51 } 
+       
+       rainfall_category = {'drizzle' : 52 , 'heavy rain' : 53 , 
+                            'light rain' : 54 , 'moderate rain' : 55 , 'no rain' : 56}
+       
+       snow_category = {'light snow' : 57 , 'moderate snow' : 58 ,'no snow' : 59}
+       
+       wind_category = {'calm' : 60 , 'light breeze' : 61 , 'plowing' : 62, 'weak breeze' : 63}
+       
+       solar_radiation_category = {'moderate' : 64 , 'strong' : 65 , 'weak' : 66}
+      
+       visibility_category = {'bad' : 67 , 'moderate' : 68 , 'very bad' : 69}
+       
+       result = []
+       result[0] = self.bikes[0] #TO DO temperature
+       result[1] = self.bikes[1] #To DO dew point
+       result[2] = self.bikes[2] #TO DO humidity
+       
 
 
 
