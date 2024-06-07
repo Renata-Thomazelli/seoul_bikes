@@ -6,7 +6,7 @@ import joblib
 import numpy as  np
 
 #Class
-class Bike:
+class Bikes:
     # The constructor
    def __init__(self, bikes):
        self.bikes = bikes
@@ -15,8 +15,8 @@ class Bike:
        
 
       # Taking each item get from the application
-       month = { 1 : 1 , 2 : 1 , 3 : 3 , 4 : 4 , 5 : 5 , 6 : 6 , 
-                7 : 7 , 8 :8 , 9 : 9 , 10 : 10 , 11 : 11 , 12 : 12}
+       month = { "1" : 1 , "2" : 2 , "3" : 3 , "4" : 4 , "5" : 5 , "6" : 6 , 
+                "7" : 7 , "8" :8 , "9" : 9 , "10" : 10 , "11" : 11 , "12" : 12}
        
        day_of_week = {'Friday' : 13 , 'Monday' : 14 , 'Saturday' : 15 , 
                       'Sunday' : 16 , 'Thursday' : 17 , 'Tuesday' : 18 , 'Wednesday' : 19}

@@ -12,7 +12,7 @@
 <body>
 <div>
     <div class="container">
-        <h1>Estimated Availability of Bikes for Rent in Seoul</h1>
+        <h1>Estimating the Availability of Bikes for Rent in Seoul</h1>
         {% if result %}
         <h3>Quantity Estimated: {{result}}$</h3>
         <a href="/">To Estimate Again</a>
@@ -25,18 +25,18 @@
                     <div class="col">
                         <label>Month</label>
                         <select class="form-control form-control-sm" name="new_bikes_estimative" required>
-                            <option value="Jan">January</option>
-                            <option value="Feb">February</option>
-                            <option value="Mar">March</option>
-                            <option value="Apr">April</option>
-                            <option value="May">May</option>
-                            <option value="Jun">June</option>
-                            <option value="Jul">July</option>
-                            <option value="Aug">August</option>
-                            <option value="Sep">September</option>
-                            <option value="Oct">October</option>
-                            <option value="Nov">November</option>
-                            <option value="Dec">December</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
 
                         </select>
                     </div>
@@ -112,11 +112,10 @@
                     <div class="col">
                         <label>Season</label>
                         <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                            <option value="Spring">Spring</option>
                             <option value="Summer">Summer</option>
                             <option value="Autumn">Autumn</option>
                             <option value="Winter">Winter</option>
-                            <option value="Spring">Spring</option>
-
                         </select>
                     </div>
 
@@ -159,7 +158,7 @@
                             <option value="no snow">No Snow</option>
                             <option value="light snow">Light Snow</option>
                             <option value="moderate snow">Moderate Snow</option>
-                            <option value="heavy snow">Heavy Snow</option>
+                            <!--<option value="heavy snow">Heavy Snow</option>/-->
 
                         </select>
                     </div>
@@ -173,44 +172,44 @@
                             <option value="plowing">Plowing</option>
                             <option value="light breeze">Light Breeze</option>
                             <option value="weak breeze">Weak Breeze</option>
-                            <option value="moderate breeze">Moderate Breeze</option>
-                            <option value="strong breeze">Strong Breeze</option>
-                            <option value="wind">Wind</option>
-                        </select>
-                    </div>
+                            <!--<option value="moderate breeze">Moderate Breeze</option>
+                                <option value="strong breeze">Strong Breeze</option>
+                                <option value="wind">Wind</option>/-->
+                            </select>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <div class="form-row">
-                    <div class="col">
-                        <label>Solar Radiation</label>
-                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
-                            <option value="weak">Weak</option>
-                            <option value="moderate">Moderate</option>
-                            <option value="strong">Strong</option>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Solar Radiation</label>
+                            <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                                <option value="weak">Weak</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="strong">Strong</option>
 
-                        </select>
+                            </select>
+                        </div>
+
+                        <div class="col">
+                            <label>Visibility</label>
+                            <select class="form-control form-control-sm" name="new_bikes_estimative" required>
+                                <option value="very Bad">Very Bad</option>
+                                <option value="bad">Bad</option>
+                                <option value="moderate">Moderate</option>
+                                <!--<option value="good">Good</option>-->
+                                <!--<option value="excelent">Excelent</option>-->
+
+                            </select>
+                        </div>
+
+
                     </div>
-
-                    <div class="col">
-                        <label>Visibility</label>
-                        <select class="form-control form-control-sm" name="new_bikes_estimative" required>
-                            <option value="very Bad">Very Bad</option>
-                            <option value="bad">Bad</option>
-                            <option value="moderate">Moderate</option>
-                            <option value="good">Good</option>
-                            <option value="excelent">Excelent</option>
-
-                        </select>
-                    </div>
-
-
                 </div>
-            </div>
-        </form>
-        {% endif %}
-</div>
-</body>
-</html>
+            </form>
+            {% endif %}
+    </div>
+    </body>
+    </html>
