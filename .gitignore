@@ -1,2 +1,7 @@
 .ipynb_checkpoints/
 seoul_bike_sharing_demand/
+__pycache__/
+templates/.vs/
+tools/__pycache__/
+
+
