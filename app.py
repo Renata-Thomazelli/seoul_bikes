@@ -2,6 +2,9 @@
 # app flask
 
 # Imprts
+import sys
+sys.path.append('D:\Projetos\ML\Seoul_bikes')
+
 from flask import Flask, request
 from flask import render_template
 from tools.bike import Bikes
