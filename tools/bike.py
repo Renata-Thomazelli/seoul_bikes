@@ -10,6 +10,8 @@ class Bikes:
     # The constructor
    def __init__(self, bikes):
        self.bikes = bikes
+       
+       
 
    def prepare(self):
 
@@ -42,28 +44,28 @@ class Bikes:
        
        seasons = {'Autumn' : 47, 'Spring' : 48 , 'Summer' : 49 , 'Winter' : 50 } 
        season_index = seasons.get(self.bikes[5])
-       result[seasons[season_index]] = 1
+       result[season_index] = 1
        
        rainfall_category = {'1_no rain' : 51 , '2_drizzle' : 52 , 
                             '3_light rain' : 53 , '4_moderate rain' : 54 , '5_heavy rain' : 55}
        rainfall_category_index = rainfall_category.get(self.bikes[6])
-       result[rainfall_category[rainfall_category_index]] = 1
+       result[rainfall_category_index] = 1
        
        snow_category = {'1_no snow' : 56 , '2_light snow' : 57 ,'3_moderate snow' : 58}
        snow_category_index =  snow_category.get(self.bikes[7])
-       result[snow_category[snow_category_index]] = 1
+       result[snow_category_index] = 1
        
        wind_category = {'1_calm' : 59 , '2_plowing' : 60 , '3_light breeze' : 61, '4_weak breeze' : 62}
        wind_category_index = wind_category.get(self.bikes[8])
-       result[wind_category[wind_category_index]] = 1
+       result[wind_category_index] = 1
 
        solar_radiation_category = {'1_weak' : 63 , '2_moderate' : 64 , '3_strong' : 65}
        solar_radiation_category_index = solar_radiation_category.get(self.bikes[9])
-       result[solar_radiation_category[solar_radiation_category_index]] = 1
+       result[solar_radiation_category_index] = 1
       
        visibility_category = {'1_very bad' : 66 , '2_bad' : 67 , '3_moderate' : 68}
        visibility_category_index =  visibility_category.get(self.bikes[10])
-       result[visibility_category[visibility_category_index]] = 1
+       result[visibility_category_index] = 1
        
        
        result[69] = float(self.bikes[11]) 
@@ -72,10 +74,10 @@ class Bikes:
 
        return result
 
-   def predict(self, car):
-        quantity_bikes_to_predict = [bikes]
-        model = joblib.load('modelo/modelo.pkl')
-        predicted_bikes_quantities = model.predict(quantity_bikes_to_predict)
+   def predict(self, result):
+        quantity_bikes_to_predict = np.array(result)
+        model = joblib.load('modelo/model.pkl')
+        predicted_bikes_quantities = model.predict(quantity_bikes_to_predict.reshape(1, -1))
         value = predicted_bikes_quantities[0]
         return value
        
