@@ -1,10 +1,13 @@
-# Lab - Deploy na Prática - App Web Para Previsão de Preço de Produtos
+# App Web to preview the quantity of bikes
 # app flask
 
 # Imprts
+import sys
+sys.path.append('D:\Projetos\ML\Seoul_bikes')
+
 from flask import Flask, request
 from flask import render_template
-from tools.car import Car
+from tools.bike import Bikes
 
 # Cria a app
 app = Flask(__name__)
@@ -18,10 +21,10 @@ def index():
 # Página com resultado da previsão
 @app.route("/estimate", methods = ["POST"])
 def estimate():
-    values = request.form.getlist('new_car')
-    car = Car(values)
-    value_to_predict = car.prepare()
-    result = car.predict(value_to_predict)
+    values = request.form.getlist('new_bikes_estimative')
+    bike = Bikes(values)
+    value_to_predict = bike.prepare()
+    result = bike.predict(value_to_predict)
     result = "%.2f" % result
     return render_template('index.html', result = result)
 
