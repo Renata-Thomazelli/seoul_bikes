@@ -25,7 +25,7 @@ def estimate():
     bike = Bikes(values)
     value_to_predict = bike.prepare()
     result = bike.predict(value_to_predict)
-    result = "%.2f" % result
+    #result = "%.2f" % result
     return render_template('index.html', result = result)
 
 # Executa a app
