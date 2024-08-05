@@ -1,13 +1,15 @@
 # App Web to preview the quantity of bikes
 # app flask
 
-# Imprts
+# Imports
 import sys
 sys.path.append('D:\Projetos\ML\Seoul_bikes')
+sys.path.append('.')
 
 from flask import Flask, request
 from flask import render_template
 from tools.bike import Bikes
+#from tools.encoders import CategoricalVaribleEncoder
 
 # Cria a app
 app = Flask(__name__)
@@ -25,7 +27,7 @@ def estimate():
     bike = Bikes(values)
     value_to_predict = bike.prepare()
     result = bike.predict(value_to_predict)
-    result = "%.2f" % result
+    #result = "%.2f" % result
     return render_template('index.html', result = result)
 
 # Executa a app
