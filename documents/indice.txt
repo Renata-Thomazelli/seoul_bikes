@@ -1,0 +1,15 @@
+1.The Problem Definition
+2.DATA EXTRACTION
+2.1.UPLOADING AND EXPLORING THE DATA
+2.1.2.FINDING OUT THE ENCODING TYPE
+2.1.3.CLEANING THE COLUMNS' NAME
+2.1.4.CHECKING THE DATA'S SHAPE AND NAN VALUES
+2.1.5.CHECKING THE DATA'S TYPES
+3.DATA PREPROCESSING
+3.1.Feature Engineering:
+3.1.1- Variable Transformation
+3.1.1.1 - A class to treat the data
+3.1.1.1.2 - Checking the memory usage after casted the data
+3.1.1.1.3 - Checking the categorical columns
+4. Analysis
+4.1 A Bar Plot to analyze the rented bikes by season and month.
