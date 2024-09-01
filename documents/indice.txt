@@ -1,29 +1,83 @@
-1.The Problem Definition
-2.DATA EXTRACTION
-2.1.UPLOADING AND EXPLORING THE DATA
-2.1.2.FINDING OUT THE ENCODING TYPE
-2.1.3.CLEANING THE COLUMNS' NAME
-2.1.4.CHECKING THE DATA'S SHAPE AND NAN VALUES
-2.1.5.CHECKING THE DATA'S TYPES
-3.DATA PREPROCESSING
-3.1.Feature Engineering:
-3.1.1- Variable Transformation
-3.1.1.1 - A class to treat the data
-3.1.1.1.2 - Checking the memory usage after casted the data
-3.1.1.1.3 - Checking the categorical columns
-4. Analysis
-4.1 A Bar Plot to analyze the rented month and year
-4.1.1 Creating a dataframe groupying values by month and year
-4.1.1.1 Selecting the values
-4.1.1.2 Groupyng values by year and month
-4.1.1.3 Setting the index by year and month in order of month of the year
-4.1.1.4 Dividing the 'rented_bikes_count' columns per 1000 to display the number as Hundreds of thousands
-4.1.1.5 Transforming the column 'rented_bikes_count' dividing it per 1000 to display the number as Hundreds of thousands
-4.1.1.6 Developing the Bar Chart of Rented bikes by year and month
-4.2 A Bar Plot to analyze the total bikes rented by season
-4.2.1 Creating a dataframe groupying values by season and month
-4.2.2.1 Grouping by Season
-4.2.2.2 Dividing the 'rented_bikes_count' columns per 1000 to display the number as thousands
-4.2.2.3 Developing the Bar Chart of Rented bikes by season of the year
-5 Detecting Outliers
-5.1 Creating the charts
+1.The Problem Definition  
+2.DATA EXTRACTION  
+2.1.UPLOADING AND EXPLORING THE DATA  
+2.1.2.FINDING OUT THE ENCODING TYPE  
+2.1.3.CLEANING THE COLUMNS' NAME  
+2.1.4.CHECKING THE DATA'S SHAPE AND NAN VALUES  
+2.1.5.CHECKING THE DATA'S TYPES  
+3.DATA PREPROCESSING  
+3.1.Feature Engineering:  
+3.1.1- Variable Transformation  
+3.1.1.1 - A class to treat the data  
+3.1.1.1.2 - Checking the memory usage after casted the data  
+3.1.1.1.3 - Checking the categorical columns  
+4. Analysis  
+4.1 A Bar Plot to analyze the rented month and year  
+4.1.1 Creating a dataframe groupying values by month and year  
+4.1.1.1 Selecting the values  
+4.1.1.2 Groupyng values by year and month  
+4.1.1.3 Setting the index by year and month in order of month of the year  
+4.1.1.4 Dividing the 'rented_bikes_count' columns per 1000 to display the number as Hundreds of thousands  
+4.1.1.5 Transforming the column 'rented_bikes_count' dividing it per 1000 to display the number as Hundreds of thousands  
+4.1.1.6 Developing the Bar Chart of Rented bikes by year and month  
+4.2 A Bar Plot to analyze the total bikes rented by season  
+4.2.1 Creating a dataframe groupying values by season and month  
+4.2.2.1 Grouping by Season  
+4.2.2.2 Dividing the 'rented_bikes_count' columns per 1000 to display the number as thousands  
+4.2.2.3 Developing the Bar Chart of Rented bikes by season of the year  
+5 Detecting Outliers  
+5.1 Creating the charts  
+5.2 Checking the Outliers  
+5.2.1 Tukey's Method  
+5.2.1.2 Calculating the Mild Outliers  
+5.2.1.2.1 Mild Outliers - temperature °c  
+5.2.1.2.1 A Box plot for temperature outliers  
+5.2.1.2.2 A Box plot for Humidity outliers  
+5.2.1.2.3 A Box plot for Wind Speed outliers  
+5.2.1.2.3.1  Identifying Wind Speed outliers  
+5.2.1.2.3.1.2  Calculating the Wind speed Mild Outliers  
+5.2.1.2.3.1.3  Calculating the Wind speed Extreme Outliers  
+5.2.1.2.3.1.4 Getting the total number of Outliers  
+5.2.1.2.3.1.5 Getting the percentage of Outliers  
+5.2.1.2.3.1.6 Pointing out the Wind Speed Outliers  
+5.2.1.2.3.1.7 A chart to identify wind Speed Outliers by season and month  
+5.2.1.3 A Box plot for Solar Radiation outliers  
+5.2.1.4 A Box plot for Visibility outliers  
+5.2.1.5 A Box plot for Rainfall outliers  
+6 Applying the Binning Technique  
+6.1 Binning the Wind Category  
+6.1.1 Creating a new Dataframe with the Wind Category feature  
+6.1.1.1 Checking the unique values of the Wind Category feature 
+6.1.1.1.1 Analysing the binning's impact  
+6.2. Binning the Solar Radiation Category  
+6.2.1 Creating a new Dataframe with the Solar Radiaton Category feature  
+6.2.1.1 Checking the unique values of the Solar Radiaton Category feature  
+6.3 Binning the Visibility Category  
+6.3.1 Creating a new Dataframe with the Visibility Category feature  
+6.3.1.1 Checking the unique values of the Visibility Category feature  
+6.4 Binning the Snow Category  
+6.4.1 Creating a new Dataframe with the Snow Category feature  
+6.4.1.1 Checking the unique values of the Snow Category 
+6.5 Checking all columns and dropping the ones that we had binned
+6.6 Looking for NAN values
+6.7 Redefining the columns order
+6.7.1 Checking the columns' categories
+7 Separating the dataframe into trainint and test
+8 Applying the Machile Learning Models
+8.1 Foward Selection Linear Regression
+8.1.1 Creating Functions
+8.1.2 CategorialVaribleEncoder Function and FowardSelectionLinearRegression Function
+8.1.3 Applying the Forward Selection Leinear Regression Model
+8.1.3.1 Seeing the Best Predictors
+8.1.3.1.1 Get the total number of best predictors
+8.1.3.1.2 Checking the shape
+8.1.4 Getting the R2 Score
+8.1.4.1 Getting the maximum value predicted
+8.2 Plotting the values
+8.2.1 A draft chart without mean
+8.2.2 Grouping values to create a chart
+8.2.3 Plotting the Foward Selection Linear Regression charts
+8.2.3.1 Plotting the Foward Selection Linear Regression charts by month
+8.2.3.1.1 A function to plot by month
+8.2.3.1.1.1 Creating a DataFrame with prediction and real values
+8.2.3.1.1.2 Plotting by month
